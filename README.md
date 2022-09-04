@@ -5,5 +5,6 @@
 ##### Need stars if that's helpful :)
 
 -----
-Currently available with *Binary Tree* section Aug 30th, 2022
+Currently available with *Binary Tree* section Aug 30th, 2022 (Python Version)
 -----
+Currently available with *Sliding Window* section Sep 3rd, 2022 (Java Version)
