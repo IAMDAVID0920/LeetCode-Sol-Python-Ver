@@ -205,6 +205,54 @@ class Solution {
 }
 ```
 
+### 239. Sliding Window Maximum
+
+[239. Sliding Window Maximum](https://leetcode.cn/problems/sliding-window-maximum/)
+
+Idea:Use Monotonic Queue Or Deque
+
+**Java Deque API**
+
+```
+offer() -> insert
+poll() -> 
+peak() ->
+pollLast() ->
+peakLast() ->
+pollFirst() ->
+pollLast() ->
+
+```
+
+```java
+class Solution {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        // 双向队列
+        ArrayDeque<Integer> window = new ArrayDeque<>();
+        // store the final maximum answer
+        int[] ans = new int[nums.length - k + 1];
+        int index = 0;
+        for(int i = 0; i < nums.length; i++){
+            // queue head node suppose to be under [i - k + 1, i]
+            while(!window.isEmpty() && window.peek() < i - k + 1){
+                window.poll();
+            }
+            while(!window.isEmpty() && nums[window.peekLast()] < nums[i]){
+                window.pollLast();
+            }
+
+            window.offer(i);
+
+            if(i >= k -1 ){
+                ans[index ++ ] = nums[window.peek()];
+            }
+        
+        }
+        return ans;
+    }
+}
+```
+
 
 
 ### 121. Best Time to Buy and Sell Stock I
