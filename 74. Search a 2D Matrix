@@ -1,0 +1,29 @@
+# 74. Search a 2D Matrix
+
+[74. Search a 2D Matrix](https://leetcode.cn/problems/search-a-2d-matrix/)
+
+Idea: 从右上角找 当做分界线 小于target row++, 大于target col--.
+
+```java
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+    
+        if(matrix.length == 0)  return false;
+        int row = 0;
+        int col = matrix[0].length - 1;
+        
+        while(row < matrix.length && col >= 0){
+            // 左上角都大那么无解 因为左上角最小
+            if(matrix[row][0] > target)         return false;
+            // binary search from left right corner, if smaller increase row, if bigger shrink col
+            // because of sorted in each row from left to right
+            if(matrix[row][col] < target)       row ++;
+            else if(matrix[row][col] > target)  col --;
+            else                                return true;
+        }
+        
+        return false;
+    }
+}
+```
+
