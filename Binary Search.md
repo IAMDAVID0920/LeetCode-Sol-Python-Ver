@@ -1,4 +1,4 @@
-# Binary Search
+#  Binary Search
 
 ### Search in a Sorted Array of Unknown Size
 
