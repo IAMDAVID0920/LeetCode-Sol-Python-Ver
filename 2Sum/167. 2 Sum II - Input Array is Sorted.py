@@ -1,6 +1,5 @@
 from typing import List
 
-
 class Solution:
     # Follow up: if number is really big -> overflow? Use Long!
     # Follow up2: If target is double? check target-tmp < 0.01
