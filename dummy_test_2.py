@@ -31,3 +31,4 @@ if __name__ == "__main__":
     calc = Calculator()
     result = calc.add(10).subtract(3).multiply(2).get_result()
     print(f"Result: {result}")
+

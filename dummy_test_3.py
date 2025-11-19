@@ -30,3 +30,4 @@ if __name__ == "__main__":
     print(f"Max: {find_max(nums)}")
     print(f"Min: {find_min(nums)}")
     print(f"Average: {calculate_average(nums)}")
+
